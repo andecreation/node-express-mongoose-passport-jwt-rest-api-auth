@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var config = require('./config/database');
 
-mongoose.connect(config.database);
+mongoose.connect(config.database, { useNewUrlParser: true });
 
 var api = require('./routes/api');
 
